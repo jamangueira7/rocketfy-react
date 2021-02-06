@@ -5,11 +5,12 @@ import BoardContext from '../Board/context';
 
 import { Container, Label } from './styles';
 
-export default function Card({ data, index }) {
+export default function Card({ data, index, listIndex }) {
     const ref = useRef();
+    const { move } = useContext(BoardContext);
 
     const [{ isDragging }, dragRef] = useDrag({
-       item:{ type: 'CARD', index },
+       item:{ type: 'CARD', index, listIndex },
        collect: monitor => ({
            isDragging: monitor.isDragging(),
        }),
@@ -18,6 +19,9 @@ export default function Card({ data, index }) {
     const [,dropRef] = useDrop({
         accept: 'CARD',
         hover(item, monitor) {
+            const draggedListIndex = item.listIndex;
+            //const targetListIndex = listIndex;
+
             const draggedIndex = item.index;
             const targetIndex = index;
 
@@ -42,6 +46,9 @@ export default function Card({ data, index }) {
                 return;
             }
 
+            move(draggedListIndex, draggedIndex, targetIndex);
+
+            item.index = targetIndex;
 
         }
     });

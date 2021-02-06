@@ -6093,6 +6093,11 @@ ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.8.tgz#f150a8b50a34289b33e22f5889abd4d8016f0e57"
   integrity sha512-BMpfD7PpiETpBl/A6S498BaIJ6Y/ABT93ETbby2fP00v4EbvPBXWEoaR1UBPKs3iR53pJY7EtZk5KACI57i1Uw==
 
+imer@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/imer/-/imer-0.0.1.tgz#f955a224d81377e8b8937e8ac1e40db44b73dd02"
+  integrity sha512-qJpLSjvJs1GJFasPPlVlV3tEF1BkemSWBmemiIm6HHBf+QFvSuF+LJSNThpbQ9GTmZ2sAU5PteklrL7PUTEIHg==
+
 immer@7.0.9:
   version "7.0.9"
   resolved "https://registry.yarnpkg.com/immer/-/immer-7.0.9.tgz#28e7552c21d39dd76feccd2b800b7bc86ee4a62e"
